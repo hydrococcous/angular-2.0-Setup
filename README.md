@@ -84,3 +84,14 @@ package.json now extend to:
   }
 ...
 ```
+install angular module:
+* core
+* common
+* compiler
+* platform-browser
+* platform-browser-dynamic
+* http
+* router
+```
+
+```
