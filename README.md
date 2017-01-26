@@ -69,7 +69,9 @@ package.json now extend to:
 * rxjs
 * systemjs
 * zone.js
-
+```
+npm install [modulname] --save
+```
 package.json now extend to:
 ```
 ...
