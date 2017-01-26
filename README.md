@@ -84,6 +84,7 @@ package.json now extend to:
   }
 ...
 ```
+## Add angular-module to project
 install angular module:
 * core
 * common
@@ -112,3 +113,5 @@ dependencies area in package.json is now grow up to:
     "zone.js": "^0.7.6"
   }
 ```
+## TypeScript configuration
+
