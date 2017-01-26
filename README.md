@@ -220,3 +220,23 @@ expand/change it to:
 }
 
 ```
+## Install Typdefinitions
+Expand the package.json in "scripts" with:
+```
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc",
+    "typings": "typings"
+  },
+```
+and call in console:
+```
+npm run typings -- init
+```
+This create a file named typings.json
+```
+{
+  "name": "app",
+  "dependencies": {}
+}
+```
