@@ -93,5 +93,22 @@ install angular module:
 * http
 * router
 ```
-
+npm install @angular/[modulname] --save
+```
+dependencie area in package.json is now grow up to:
+```
+  "dependencies": {
+    "@angular/common": "^2.4.5",
+    "@angular/compiler": "^2.4.5",
+    "@angular/core": "^2.4.5",
+    "@angular/http": "^2.4.5",
+    "@angular/platform-browser": "^2.4.5",
+    "@angular/platform-browser-dynamic": "^2.4.5",
+    "@angular/router": "^3.4.5",
+    "core-js": "^2.4.1",
+    "reflect-metadata": "^0.1.9",
+    "rxjs": "^5.0.3",
+    "systemjs": "^0.20.1",
+    "zone.js": "^0.7.6"
+  }
 ```
