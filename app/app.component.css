@@ -1,0 +1,10 @@
+nav{
+    border: 1px dotted red;
+}
+main{
+    min-height: 300px;
+    background-color: #aaaaaa;
+}
+footer{
+    border: 1px dotted green;
+}
