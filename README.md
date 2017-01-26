@@ -329,3 +329,27 @@ create index.html next to package.json with following content:
 </body>
 </html>
 ```
+create main.ts in new folder app/
+```
+console.log('Hello World');
+```
+
+modify package.json for compiling *.ts to *.js, add a watcher and the lite-server
+```
+  "scripts": {
+    "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "typings install",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "typings": "typings",
+    "lite": "lite-server"
+  },
+```
+
+And now call:
+```
+npm run start
+```
+
+ready, have fun with angular 2.0
