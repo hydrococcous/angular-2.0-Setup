@@ -2,7 +2,7 @@
 
 ##Projectsetup width node.js
 
-Define a folder for your project-setup. Change into folder and create a package.json
+Define a folder for your project-setup. Change into folder and create a package.json by:
 
 ```
 npm init
