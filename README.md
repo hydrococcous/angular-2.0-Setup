@@ -297,4 +297,35 @@ create a file named system.config.js next to package.json with the following con
     });
 })(this);
 ```
+## Bind system.js in project-setup
+create index.html next to package.json with following content:
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>selfSetup</title>
+    <meta name="vieport" content="width=device-width; initial-scale=1.0">
 
+    <!-- polyfills -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+    <!-- vendors -->
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <script>
+        System.import ('system.config.js').then (function(){
+            System.import ('app');
+        }).catch (function(err){
+            console.error(err)
+        })
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
+```
