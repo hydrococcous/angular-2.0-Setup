@@ -48,3 +48,22 @@ package.json now extend to:
   },
 ...
 ```
+... and some vendors and polyfills:
+* core-js
+* reflect-metadata
+* rxjs
+* systemjs
+* zone.js
+
+package.json now extend to:
+```
+...
+  "dependencies": {
+    "core-js": "^2.4.1",
+    "reflect-metadata": "^0.1.9",
+    "rxjs": "^5.0.3",
+    "systemjs": "^0.20.1",
+    "zone.js": "^0.7.6"
+  }
+...
+```
