@@ -7,7 +7,18 @@ Define a folder for your project-setup. Change into folder and create a package.
 ```
 npm init
 ```
-Follow the Instructions on screen an as a result you have a package,json similar to this: 
+Follow the Instructions on screen 
+
+```
+name: yourAppName
+version 0.0.1
+description: Angular 2.0 Setup on basis of node and systemjs
+entry point: /* you can leave blank */
+test command: /* you can leave blank */
+git repository: 
+
+```
+.. and as a result you have a package,json similar to this: 
 
 ```
 {
