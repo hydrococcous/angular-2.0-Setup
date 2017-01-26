@@ -95,7 +95,7 @@ install angular module:
 ```
 npm install @angular/[modulname] --save
 ```
-dependencie area in package.json is now grow up to:
+dependencies area in package.json is now grow up to:
 ```
   "dependencies": {
     "@angular/common": "^2.4.5",
