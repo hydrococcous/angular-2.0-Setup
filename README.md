@@ -27,3 +27,13 @@ Follow the Instructions on screen an as a result you have a package,json similar
   "license": "ISC"
 }
 ```
+## Add node-module to project
+We need the following modules:
+* concurrently
+* lite-server
+* typescript
+* typings
+
+```
+npm install [modulname] --save-dev
+```
