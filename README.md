@@ -15,7 +15,11 @@ version 0.0.1
 description: Angular 2.0 Setup on basis of node and systemjs
 entry point: /* you can leave blank */
 test command: /* you can leave blank */
-git repository: 
+git repository: https://github.com/yourename/youre-repository.git 
+keywords: Angular 2.0 Setup
+author: Youre Name
+license: /* you can leave blank */
+
 
 ```
 .. and as a result you have a package,json similar to this: 
