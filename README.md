@@ -28,7 +28,7 @@ Follow the Instructions on screen an as a result you have a package,json similar
 }
 ```
 ## Add node-module to project
-We need the following modules:
+We need the following modules (necessary):
 * concurrently
 * lite-server
 * typescript
@@ -36,4 +36,15 @@ We need the following modules:
 
 ```
 npm install [modulname] --save-dev
+```
+package.json now extend to:
+```
+...
+"devDependencies": {
+    "concurrently": "^3.1.0",
+    "lite-server": "^2.2.2",
+    "typescript": "^2.1.5",
+    "typings": "^2.1.0"
+  },
+...
 ```
