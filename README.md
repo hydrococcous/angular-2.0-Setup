@@ -2,8 +2,28 @@
 
 ##Projectsetup width node.js
 
-Define a folder for your project-setup. Change into folder and create a packege.json
+Define a folder for your project-setup. Change into folder and create a package.json
 
 ```
 npm init
+```
+Follow the Instructions on screen an as a result you have a package,json similar to this: 
+
+```
+{
+  "name": "app",
+  "version": "0.0.1",
+  "description": "Angular 2.0 Setup auf Basis von node und systemjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Angular",
+    "2.0",
+    "Setup"
+  ],
+  "author": "Sandro Birke",
+  "license": "ISC"
+}
 ```
