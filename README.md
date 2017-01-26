@@ -185,3 +185,38 @@ Options:
  -w, --watch                         Watch input files.
  @<file>                             Insert command line options and files from a file.
 ```
+Now create a tsconfig.json (Compiler-Options) with:
+```
+npm run tsc -- init
+```
+tsconfig.json:
+```
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "noImplicitAny": false,
+        "sourceMap": false
+    }
+}
+```
+
+expand/change it to:
+```
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "noImplicitAny": false,
+        "sourceMap": true,
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "removeComments": false
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
+
+```
