@@ -240,3 +240,20 @@ This create a file named typings.json
   "dependencies": {}
 }
 ```
+import Typedefinition:
+```
+npm run typings -- install dt~node --save --global
+npm run typings -- install dt~core-js --save --global
+
+```
+and configure package.json in "scripts" area:
+```
+ "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "typings install",
+    "tsc": "tsc",
+    "typings": "typings"
+  },
+```
+
+
