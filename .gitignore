@@ -45,3 +45,11 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+.idea/
+app/app.component.js
+app/app.component.js.map
+app/app.modul.js
+app/app.modul.js.map
+node_modules/normalize-package-data/test/normalize.js~
+npm-debug.log

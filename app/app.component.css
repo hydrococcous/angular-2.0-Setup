@@ -1,0 +1,11 @@
+HEADER, FOOTER{
+    background-color: beige;
+    padding: 5px;
+}
+
+MAIN{
+    background-color: #ccc;
+    padding: 5px;
+    margin: 5px;
+    min-height: 300px;
+}
