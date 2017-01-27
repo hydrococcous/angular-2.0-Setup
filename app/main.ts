@@ -1,5 +1,4 @@
-/**
- * Created by s.birke on 26.01.2017.
- */
+import {platformBrowserDynamic} from "@angular/platform-browser-dynamic"
+import {AppModule} from './app.modul'
 
-console.log('Hello World');
+platformBrowserDynamic().bootstrapModule( AppModule );
