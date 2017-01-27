@@ -2,6 +2,10 @@
 
 ##Projectsetup width node.js
 
+System-Requirements: Windows(testet under), npm V3.10.10,  node V6.9.4. 
+Test under OSX Sierra 10.12.2 with npm V4.0.5,  node V7.4.0 failed!
+See here: [https://github.com/npm/npm/issues/15590](https://github.com/npm/npm/issues/15590)
+
 Define a folder for your project-setup. Change into folder and create a package.json by:
 
 ```
