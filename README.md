@@ -54,7 +54,7 @@ We need the following modules (necessary):
 * typings
 
 ```
-npm install [modulname] --save-dev
+npm install -g [modulname] --save-dev
 ```
 package.json now extend to:
 ```
