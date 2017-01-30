@@ -9,6 +9,7 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var app_component_1 = require("./app.component");
 var user_module_1 = require("./user/user.module");
+var user_date_modul_1 = require("./user/user.date.modul");
 var AppModule = (function () {
     /**
      * Applikations-Modul
@@ -22,7 +23,8 @@ AppModule = __decorate([
     core_1.NgModule({
         imports: [
             platform_browser_1.BrowserModule,
-            user_module_1.UserModule
+            user_module_1.UserModule,
+            user_date_modul_1.UserDateModul
         ],
         declarations: [app_component_1.AppComponent],
         bootstrap: [app_component_1.AppComponent]
