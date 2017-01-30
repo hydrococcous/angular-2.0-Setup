@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import {Component, Input} from "@angular/core";
 @Component({
     selector: 'user',
     styles: [`
@@ -37,7 +37,9 @@ export class UserComponent{
         console.log('User Component exportiert');
     }
 
-    username:string = "Sandro Birke";
+    @Input()
+    username:string;
+
     label:string = "Userimage";
     hidden:boolean = false;
     disabled:any = null;

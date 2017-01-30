@@ -12,4 +12,6 @@ export class AppComponent{
         console.log('App Component exportiert');
     }
 
+    username:string = "Peter Mustermann";
+
 }
