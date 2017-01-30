@@ -53,3 +53,4 @@ app/app.module.js
 app/app.module.js.map
 node_modules/normalize-package-data/test/normalize.js~
 npm-debug.log
+node_modules/ng2-bootstrap/
