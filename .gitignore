@@ -49,7 +49,7 @@ Temporary Items
 .idea/
 app/app.component.js
 app/app.component.js.map
-app/app.modul.js
-app/app.modul.js.map
+app/app.module.js
+app/app.module.js.map
 node_modules/normalize-package-data/test/normalize.js~
 npm-debug.log
