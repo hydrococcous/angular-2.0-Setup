@@ -1,5 +1,5 @@
 <nav>Navigation</nav>
 <div class="container">
-    <user [username]="username"></user>
+    <user [username]="username" (choice)="selected($event)"></user>
 </div>
 <footer>Footer</footer>

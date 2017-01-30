@@ -1,4 +1,4 @@
-import {Component, Input} from "@angular/core";
+import {Component, Input, Output, EventEmitter} from "@angular/core";
 @Component({
     selector: 'user',
     styles: [`
@@ -27,7 +27,7 @@ import {Component, Input} from "@angular/core";
             <img [src]="imgUrl" alt="" class="img" [class.hide]="hidden" [attr.aria-label]="label" />
             {{getDescription()}}
             </p>
-            <button [attr.disabled]="disabled" (click)="onClick($event)">ready to Click!</button>
+            <button [attr.disabled]="disabled" (click)="onClick($event)">Select User</button>
             <input type="text" (keydown)="onKeyDown($event)" />
         </section>`
 })
@@ -40,6 +40,9 @@ export class UserComponent{
     @Input()
     username:string;
 
+    @Output()
+    choice:EventEmitter<string> = new EventEmitter<string>();
+
     label:string = "Userimage";
     hidden:boolean = false;
     disabled:any = null;
@@ -51,12 +54,16 @@ export class UserComponent{
 
     getDescription():string{
         return "Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei denn," +
-               "es kommt zu zufälligen Umständen, in denen Mühen und Schmerz ihm große Freude bereiten können." +
-               "Auch gibt kommt zu zufälligen Umständen, in denen Mühen und Schmerz ihm große Freude bereiten können.";
+               "es kommt zu zufälligen Umständen, in denen Mühen und Schmerz ihm große Freude bereiten können. Auch gibt es " +
+               "niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei denn," +
+               "es kommt zu zufälligen Umständen, in denen Mühen und Schmerz ihm große Freude bereiten können. Auch gibt es " +
+               "niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei denn," +
+               "es kommt zu zufälligen Umständen, in denen Mühen und Schmerz ihm große Freude bereiten können.";
     }
 
     onClick(evt:Event):void{
         this.disabled = true;
+        this.choice.emit(this.username);
         console.log('deactivated: ', evt);
     }
 

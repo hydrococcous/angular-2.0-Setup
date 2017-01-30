@@ -12,6 +12,10 @@ export class AppComponent{
         console.log('App Component exportiert');
     }
 
-    username:string = "Peter Mustermann";
+    username:string = "Hans Müller";
+
+    selected(evt:Event){
+        console.log('User selected:', evt);
+    }
 
 }
