@@ -7,7 +7,7 @@ export interface UserArr{
     phone:string
 }
 
-export var userData: UserArr[] = [
+var userData: UserArr[] = [
     {
         "id": "Bottles",
         "name": "Sandro Birke",
@@ -58,3 +58,9 @@ export var userData: UserArr[] = [
     }
 
 ]
+
+export class UserDataService{
+    getUserlist() : UserArr[]{
+        return userData;
+    }
+}

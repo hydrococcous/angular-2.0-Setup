@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-import {UserArr, userData} from "./user/user.data";
+import {UserArr} from "./user/user.data";
 import {UserService} from "./user/user.service";
 
 @Component({
@@ -13,6 +13,8 @@ export class AppComponent{
     constructor(private userService:UserService){
         console.log('App Component exportiert');
 
+        this.userList = this.userService.getUserList();
+
         let lastSelected:UserArr = this.userService.getselectedUser();
         if( lastSelected ){
             this.selectedUser = this.userList.find( (value)=>{
@@ -21,7 +23,7 @@ export class AppComponent{
         }
     }
 
-    userList: UserArr[] = userData;
+    userList:UserArr[];
     selectedUser: UserArr;
     padding:number = 10;
 
