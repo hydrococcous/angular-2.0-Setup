@@ -11,7 +11,7 @@ export var userData: UserArr[] = [
     {
         "id": "Bottles",
         "name": "Sandro Birke",
-        "pos": "Dev/Frontend",
+        "pos": "Develop",
         "mail": "s.birke@comundus.com",
         "phone": "0711-6207572",
         "desc": "Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei denn, es kommt zu zufälligen Umständen, in denen Mühen und Schmerz ihm große Freude bereiten können. Um ein triviales Beispiel zu nehmen, wer von uns unterzieht sich je anstrengender körperlicher Betätigung, außer um Vorteile daraus zu ziehen."
@@ -19,7 +19,7 @@ export var userData: UserArr[] = [
     {
         "id": "Circus",
         "name": "Peter Müller",
-        "pos": "Dev/Backend",
+        "pos": "Develop",
         "mail": "p.mueller@comundus.com",
         "phone": "0711-6207573",
         "desc": "Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei denn, es kommt zu zufälligen Umständen, in denen Mühen und Schmerz ihm große Freude bereiten können. Um ein triviales Beispiel zu nehmen, wer von uns unterzieht sich je anstrengender körperlicher Betätigung, außer um Vorteile daraus zu ziehen."
@@ -27,7 +27,7 @@ export var userData: UserArr[] = [
     {
         "id": "Comb",
         "name": "Max Mustermann",
-        "pos": "Dev/Database",
+        "pos": "Develop",
         "mail": "m.mustermann@comundus.com",
         "phone": "0711-6207574",
         "desc": "Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei denn, es kommt zu zufälligen Umständen, in denen Mühen und Schmerz ihm große Freude bereiten können. Um ein triviales Beispiel zu nehmen, wer von uns unterzieht sich je anstrengender körperlicher Betätigung, außer um Vorteile daraus zu ziehen."
@@ -43,7 +43,7 @@ export var userData: UserArr[] = [
     {
         "id": "Glass",
         "name": "Caroline Isella",
-        "pos": "Graphic/CD",
+        "pos": "Graphic",
         "mail": "c.isella@comundus.com",
         "phone": "0711-6207576",
         "desc": "Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei denn, es kommt zu zufälligen Umständen, in denen Mühen und Schmerz ihm große Freude bereiten können. Um ein triviales Beispiel zu nehmen, wer von uns unterzieht sich je anstrengender körperlicher Betätigung, außer um Vorteile daraus zu ziehen."
@@ -51,7 +51,7 @@ export var userData: UserArr[] = [
     {
         "id": "Goemetry",
         "name": "Vorname Nachname",
-        "pos": "Head of Marketing",
+        "pos": "Marketing",
         "mail": "v.nachname@comundus.com",
         "phone": "0711-6207577",
         "desc": "Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei denn, es kommt zu zufälligen Umständen, in denen Mühen und Schmerz ihm große Freude bereiten können. Um ein triviales Beispiel zu nehmen, wer von uns unterzieht sich je anstrengender körperlicher Betätigung, außer um Vorteile daraus zu ziehen."

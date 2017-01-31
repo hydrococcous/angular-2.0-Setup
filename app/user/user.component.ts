@@ -32,6 +32,15 @@ import {UserArr} from "./user.data";
             
             <!-- <img [src]="imgUrl" alt="" *ngIf="imgUrl" class="img" [class.hide]="hidden" [attr.aria-label]="label" /> -->
             
+            <span [ngSwitch]="usr.pos">
+                <i class="fa fa-laptop" aria-hidden="true" *ngSwitchCase="'Develop'"></i>
+                <i class="fa fa-pencil" aria-hidden="true" *ngSwitchCase="'Graphic'"></i>
+                <i class="fa fa-money" aria-hidden="true" *ngSwitchCase="'Sales'"></i>
+                <i class="fa fa-thumb-tack" aria-hidden="true" *ngSwitchCase="'Marketing'"></i>
+                <i class="fa fa-star" aria-hidden="true" *ngSwitchDefault></i>
+            </span>
+            
+            
             {{getDescription()}}
             <br />
             <i>{{usr.phone}}</i>
