@@ -1,5 +1,6 @@
 import {Component} from "@angular/core";
 import {UserArr, userData} from "./user/user.data";
+import {UserService} from "./user/user.service";
 
 @Component({
     selector: 'my-app',
@@ -9,8 +10,15 @@ import {UserArr, userData} from "./user/user.data";
 
 export class AppComponent{
 
-    constructor(){
+    constructor(private userService:UserService){
         console.log('App Component exportiert');
+
+        let lastSelected:UserArr = this.userService.getselectedUser();
+        if( lastSelected ){
+            this.selectedUser = this.userList.find( (value)=>{
+                return value.id === lastSelected.id;
+            } );
+        }
     }
 
     userList: UserArr[] = userData;
@@ -20,6 +28,7 @@ export class AppComponent{
     selected(selectedUsr:UserArr){
         console.log('User selected:', selectedUsr);
         this.selectedUser = selectedUsr;
+        this.userService.setSelectedUser(this.selectedUser);
     }
 
 }

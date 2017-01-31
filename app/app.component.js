@@ -10,15 +10,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var user_data_1 = require("./user/user.data");
+var user_service_1 = require("./user/user.service");
 var AppComponent = (function () {
-    function AppComponent() {
+    function AppComponent(userService) {
+        this.userService = userService;
         this.userList = user_data_1.userData;
         this.padding = 10;
         console.log('App Component exportiert');
+        var lastSelected = this.userService.getselectedUser();
+        if (lastSelected) {
+            this.selectedUser = this.userList.find(function (value) {
+                return value.id === lastSelected.id;
+            });
+        }
     }
     AppComponent.prototype.selected = function (selectedUsr) {
         console.log('User selected:', selectedUsr);
         this.selectedUser = selectedUsr;
+        this.userService.setSelectedUser(this.selectedUser);
     };
     return AppComponent;
 }());
@@ -28,7 +37,7 @@ AppComponent = __decorate([
         templateUrl: './app/app.component.html',
         styleUrls: ['./app/app.component.css']
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [user_service_1.UserService])
 ], AppComponent);
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map
