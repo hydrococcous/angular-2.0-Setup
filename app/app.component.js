@@ -13,10 +13,12 @@ var user_data_1 = require("./user/user.data");
 var AppComponent = (function () {
     function AppComponent() {
         this.userList = user_data_1.userData;
+        this.padding = 10;
         console.log('App Component exportiert');
     }
     AppComponent.prototype.selected = function (selectedUsr) {
         console.log('User selected:', selectedUsr);
+        this.selectedUser = selectedUsr;
     };
     return AppComponent;
 }());

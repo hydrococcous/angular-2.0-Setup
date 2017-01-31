@@ -84,7 +84,7 @@ export class UserComponent{
     }
 
     onClick(evt:Event):void{
-        this.disabled = true;
+        //this.disabled = true;
         this.choice.emit(this.usr);
         console.log('deactivated: ', evt);
     }

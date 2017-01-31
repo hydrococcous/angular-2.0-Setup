@@ -14,9 +14,12 @@ export class AppComponent{
     }
 
     userList: UserArr[] = userData;
+    selectedUser: UserArr;
+    padding:number = 10;
 
     selected(selectedUsr:UserArr){
         console.log('User selected:', selectedUsr);
+        this.selectedUser = selectedUsr;
     }
 
 }
