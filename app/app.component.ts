@@ -1,4 +1,5 @@
 import {Component} from "@angular/core";
+import {UserArr, userData} from "./user/user.data";
 
 @Component({
     selector: 'my-app',
@@ -12,12 +13,10 @@ export class AppComponent{
         console.log('App Component exportiert');
     }
 
-    username:string = "Hans Müller";
-    imgUrl:string = "https://placeholdit.imgix.net/~text?txtsize=15&txt=100%C3%97100&w=100&h=100";
+    userList: UserArr[] = userData;
 
-
-    selected(evt:Event){
-        console.log('User selected:', evt);
+    selected(selectedUsr:UserArr){
+        console.log('User selected:', selectedUsr);
     }
 
 }

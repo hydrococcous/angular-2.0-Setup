@@ -1,4 +1,5 @@
 import {Component, Input, Output, EventEmitter} from "@angular/core";
+import {UserArr} from "./user.data";
 @Component({
     selector: 'user',
     styles: [`
@@ -6,7 +7,7 @@ import {Component, Input, Output, EventEmitter} from "@angular/core";
             display: none;
         }
         .img{
-            margin: 0 10px 5px 0;
+            margin: 3px 10px 5px 0;
             float: left;
         }
         P:after{
@@ -22,18 +23,22 @@ import {Component, Input, Output, EventEmitter} from "@angular/core";
     `],
     template: `
         <section>
-            <h3>{{username}} <small>{{getSum(13,12)}}</small></h3>
+            <h3>{{usr.name}} <small>{{usr.pos}}</small></h3>
             <p>
             
-            <template ngIf="imgUrl">
-                <img [src]="imgUrl" alt="" class="img" [class.hide]="hidden" [attr.aria-label]="label" />
+            <template ngIf="usr.id">
+                <img src="img/dummy-100x100-{{usr.id}}.jpg" alt="" class="img" [class.hide]="hidden" [attr.aria-label]="label" />
             </template>
+            
             <!-- <img [src]="imgUrl" alt="" *ngIf="imgUrl" class="img" [class.hide]="hidden" [attr.aria-label]="label" /> -->
             
             {{getDescription()}}
+            <br />
+            <i>{{usr.phone}}</i>
+            <br />
+            <i>{{usr.mail}}</i>
             </p>
             <button [attr.disabled]="disabled" (click)="onClick($event)">Select User</button>
-            <input type="text" (keydown)="onKeyDown($event)" />
         </section>`
 })
 
@@ -42,14 +47,19 @@ export class UserComponent{
         console.log('User Component exportiert');
     }
 
+    @Input('UserObj')
+    usr:UserArr;
+
+    /*
     @Input()
     username:string;
 
     @Input('img')
     imgUrl:string;
+    */
 
     @Output()
-    choice:EventEmitter<string> = new EventEmitter<string>();
+    choice:EventEmitter<UserArr> = new EventEmitter<UserArr>();
 
     label:string = "Userimage";
     hidden:boolean = false;
@@ -61,21 +71,13 @@ export class UserComponent{
     }
 
     getDescription():string{
-        return "Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei denn," +
-               "es kommt zu zufälligen Umständen, in denen Mühen und Schmerz ihm große Freude bereiten können. Auch gibt es " +
-               "niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei denn," +
-               "es kommt zu zufälligen Umständen, in denen Mühen und Schmerz ihm große Freude bereiten können. Auch gibt es " +
-               "niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei denn," +
-               "es kommt zu zufälligen Umständen, in denen Mühen und Schmerz ihm große Freude bereiten können.";
+        return this.usr.desc;
     }
 
     onClick(evt:Event):void{
         this.disabled = true;
-        this.choice.emit(this.username);
+        this.choice.emit(this.usr);
         console.log('deactivated: ', evt);
     }
 
-    onKeyDown(evt:Event):void{
-        console.log('key down: ', evt);
-    }
 }

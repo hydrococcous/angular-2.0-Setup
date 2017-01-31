@@ -9,14 +9,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var user_data_1 = require("./user/user.data");
 var AppComponent = (function () {
     function AppComponent() {
-        this.username = "Hans Müller";
-        this.imgUrl = "https://placeholdit.imgix.net/~text?txtsize=15&txt=100%C3%97100&w=100&h=100";
+        this.userList = user_data_1.userData;
         console.log('App Component exportiert');
     }
-    AppComponent.prototype.selected = function (evt) {
-        console.log('User selected:', evt);
+    AppComponent.prototype.selected = function (selectedUsr) {
+        console.log('User selected:', selectedUsr);
     };
     return AppComponent;
 }());
