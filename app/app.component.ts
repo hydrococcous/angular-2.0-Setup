@@ -13,6 +13,8 @@ export class AppComponent{
     }
 
     username:string = "Hans Müller";
+    imgUrl:string = "https://placeholdit.imgix.net/~text?txtsize=15&txt=100%C3%97100&w=100&h=100";
+
 
     selected(evt:Event){
         console.log('User selected:', evt);

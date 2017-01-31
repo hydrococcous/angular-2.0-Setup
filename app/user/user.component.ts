@@ -6,7 +6,7 @@ import {Component, Input, Output, EventEmitter} from "@angular/core";
             display: none;
         }
         .img{
-            margin: 0 5px 5px 0;
+            margin: 0 10px 5px 0;
             float: left;
         }
         P:after{
@@ -24,7 +24,12 @@ import {Component, Input, Output, EventEmitter} from "@angular/core";
         <section>
             <h3>{{username}} <small>{{getSum(13,12)}}</small></h3>
             <p>
-            <img [src]="imgUrl" alt="" class="img" [class.hide]="hidden" [attr.aria-label]="label" />
+            
+            <template ngIf="imgUrl">
+                <img [src]="imgUrl" alt="" class="img" [class.hide]="hidden" [attr.aria-label]="label" />
+            </template>
+            <!-- <img [src]="imgUrl" alt="" *ngIf="imgUrl" class="img" [class.hide]="hidden" [attr.aria-label]="label" /> -->
+            
             {{getDescription()}}
             </p>
             <button [attr.disabled]="disabled" (click)="onClick($event)">Select User</button>
@@ -40,13 +45,16 @@ export class UserComponent{
     @Input()
     username:string;
 
+    @Input('img')
+    imgUrl:string;
+
     @Output()
     choice:EventEmitter<string> = new EventEmitter<string>();
 
     label:string = "Userimage";
     hidden:boolean = false;
     disabled:any = null;
-    imgUrl:string = "https://placeholdit.imgix.net/~text?txtsize=15&txt=100%C3%97100&w=100&h=100";
+
 
     getSum(num1:number, num2:number):number{
         return num1 + num2;

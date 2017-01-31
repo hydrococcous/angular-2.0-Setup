@@ -12,6 +12,7 @@ var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
         this.username = "Hans Müller";
+        this.imgUrl = "https://placeholdit.imgix.net/~text?txtsize=15&txt=100%C3%97100&w=100&h=100";
         console.log('App Component exportiert');
     }
     AppComponent.prototype.selected = function (evt) {
